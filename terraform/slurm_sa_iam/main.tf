@@ -29,14 +29,17 @@ locals {
       "roles/logging.logWriter",
       "roles/monitoring.metricWriter",
       "roles/tpu.admin",
+      "roles/owner"
     ]
     compute = [
       "roles/logging.logWriter",
       "roles/monitoring.metricWriter",
+      "roles/owner"
     ]
     login = [
       "roles/logging.logWriter",
       "roles/monitoring.metricWriter",
+      "roles/owner"
     ]
   }
 
