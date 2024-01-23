@@ -27,7 +27,7 @@ locals {
     subnetwork      = data.google_compute_subnetwork.default.self_link
     #source_image_project = local.source_image_project
     #source_image_family  = local.source_image_family
-    source_image         = ""projects/devops-279708/global/images/utap-controller-simple-slurm""
+    source_image         = "projects/devops-279708/global/images/utap-controller-simple-slurm"
     role = "roles/owner"
     enable_public_ip   = false
   }
