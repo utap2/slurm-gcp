@@ -60,7 +60,14 @@ locals {
         Default = "YES"
       }
       partition_name    = "compute"
-      partition_nodeset = [local.nodeset[0].nodeset_name]
+      partition_nodeset = [local.nodeset[0].nodeset_name]#    
+#     network_storage      = [{
+#      server_ip     = "none"
+#      remote_mount  = "<gcs bucket name>"
+#      local_mount   = "/data"
+#      fs_type       = "gcsfuse"
+#      mount_options = "file_mode=664,dir_mode=775,allow_other"
+#    }]
     },
   ]
 }
