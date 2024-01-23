@@ -25,6 +25,9 @@ locals {
     machine_type    = "n1-standard-4"
     service_account = module.slurm_sa_iam["controller"].service_account
     subnetwork      = data.google_compute_subnetwork.default.self_link
+    #source_image_project = local.source_image_project
+    #source_image_family  = local.source_image_family
+    source_image         = ""projects/devops-279708/global/images/utap-controller-simple-slurm""
     role = "roles/owner"
     enable_public_ip   = false
   }
@@ -38,6 +41,9 @@ locals {
       service_account = module.slurm_sa_iam["login"].service_account
       subnetwork      = data.google_compute_subnetwork.default.self_link
       role = "roles/owner"
+      #source_image_project = local.source_image_project
+      #source_image_family  = local.source_image_family
+      source_image         = "projects/devops-279708/global/images/utap-login-slurm-simple"
       enable_public_ip   = true
     }
   ]
@@ -61,13 +67,13 @@ locals {
       }
       partition_name    = "compute"
       partition_nodeset = [local.nodeset[0].nodeset_name]#    
-#     network_storage      = [{
-#      server_ip     = "none"
-#      remote_mount  = "<gcs bucket name>"
-#      local_mount   = "/data"
-#      fs_type       = "gcsfuse"
-#      mount_options = "file_mode=664,dir_mode=775,allow_other"
-#    }]
+      network_storage      = [{
+        server_ip     = "none"
+        remote_mount  = "utap-data-devops-279708"
+        local_mount   = "/data"
+        fs_type       = "gcsfuse"
+        mount_options = "file_mode=664,dir_mode=775,allow_other"
+     }]
     },
   ]
 }
