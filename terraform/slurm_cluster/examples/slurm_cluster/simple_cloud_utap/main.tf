@@ -19,6 +19,16 @@
 ##########
 
 locals {
+
+  network_storage      = [{
+    server_ip     = "none"
+    remote_mount  = "utap-data-devops-279708"
+    local_mount   = "/data"
+    fs_type       = "gcsfuse"
+    mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777,allow_other"
+  }]
+
+
   controller_instance_config = {
     disk_size_gb    = 100
     disk_type       = "pd-standard"
