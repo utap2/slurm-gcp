@@ -22,7 +22,7 @@ locals {
 
   network_storage      = [{
     server_ip     = "none"
-    remote_mount  = "utap-data-devops-279708"
+    remote_mount  = "[bucket_name]"
     local_mount   = "/data"
     fs_type       = "gcsfuse"
     mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777,allow_other"
@@ -38,6 +38,7 @@ locals {
     #source_image_project = local.source_image_project
     #source_image_family  = local.source_image_family
     source_image         = "projects/devops-279708/global/images/utap-controller-simple-slurm"
+    #source_image         = "https://storage.googleapis.com/[bucket_name]/utap-controller-simple-slurm"
     role = "roles/owner"
     enable_public_ip   = false
   }
@@ -54,6 +55,7 @@ locals {
       #source_image_project = local.source_image_project
       #source_image_family  = local.source_image_family
       source_image         = "projects/devops-279708/global/images/utap-login-slurm-simple"
+      #source_image         = "https://storage.googleapis.com/[bucket_name]/utap-login-slurm-simple"
       enable_public_ip   = true
     }
   ]
@@ -79,7 +81,7 @@ locals {
       partition_nodeset = [local.nodeset[0].nodeset_name]#    
       network_storage      = [{
         server_ip     = "none"
-        remote_mount  = "utap-data-devops-279708"
+        remote_mount  = "[bucket_name]"
         local_mount   = "/data"
         fs_type       = "gcsfuse"
         mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777,allow_other"
