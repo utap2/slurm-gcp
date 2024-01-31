@@ -54,7 +54,7 @@ locals {
       role = "roles/owner"
       #source_image_project = local.source_image_project
       #source_image_family  = local.source_image_family
-      source_image         = "projects/PROJECT_ID/global/images/utap-login-slurm-simple"
+      source_image         = "projects/PROJECT_ID/global/images/utap-login"
       #source_image         = "https://storage.cloud.google.com/BUCKET_NAME/utap-login-latest.vmdk"
       enable_public_ip   = true
     }
