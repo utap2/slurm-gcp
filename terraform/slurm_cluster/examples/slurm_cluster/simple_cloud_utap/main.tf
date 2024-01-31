@@ -37,8 +37,8 @@ locals {
     subnetwork      = data.google_compute_subnetwork.default.self_link
     #source_image_project = local.source_image_project
     #source_image_family  = local.source_image_family
-    #source_image         = "projects/devops-279708/global/images/utap-controller-simple-slurm"
-    source_image         = "https://storage.cloud.google.com/BUCKET_NAME/utap-controller-latest.vmdk"
+    source_image         = "projects/PROJECT_ID/global/images/utap-controller"
+    #source_image         = "https://storage.cloud.google.com/BUCKET_NAME/utap-controller-latest.vmdk"
     role = "roles/owner"
     enable_public_ip   = false
   }
@@ -54,8 +54,8 @@ locals {
       role = "roles/owner"
       #source_image_project = local.source_image_project
       #source_image_family  = local.source_image_family
-      #source_image         = "projects/devops-279708/global/images/utap-login-slurm-simple"
-      source_image         = "https://storage.cloud.google.com/BUCKET_NAME/utap-login-latest.vmdk"
+      source_image         = "projects/PROJECT_ID/global/images/utap-login-slurm-simple"
+      #source_image         = "https://storage.cloud.google.com/BUCKET_NAME/utap-login-latest.vmdk"
       enable_public_ip   = true
     }
   ]
