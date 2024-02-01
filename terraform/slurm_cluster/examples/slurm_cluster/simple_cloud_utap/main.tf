@@ -22,7 +22,7 @@ locals {
 
   network_storage      = [{
     server_ip     = "none"
-    remote_mount  = "[bucket_name]"
+    remote_mount  = "BUCKET_NAME"
     local_mount   = "/data"
     fs_type       = "gcsfuse"
     mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777,allow_other"
@@ -81,7 +81,7 @@ locals {
       partition_nodeset = [local.nodeset[0].nodeset_name]#    
       network_storage      = [{
         server_ip     = "none"
-        remote_mount  = "[bucket_name]"
+        remote_mount  = "BUCKET_NAME"
         local_mount   = "/data"
         fs_type       = "gcsfuse"
         mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777,allow_other"
