@@ -31,24 +31,21 @@ locals {
       "roles/tpu.admin",
       "roles/owner",
       "roles/storage.objectViewer",
-      "roles/storage.objectAdmin",
-      "roles/storage.objectViewer"
+      "roles/storage.objectAdmin"
     ]
     compute = [
       "roles/logging.logWriter",
       "roles/monitoring.metricWriter",
       "roles/owner",
       "roles/storage.objectViewer",
-      "roles/storage.objectAdmin",
-      "roles/storage.objectViewer"
+      "roles/storage.objectAdmin"
     ]
     login = [
       "roles/logging.logWriter",
       "roles/monitoring.metricWriter",
       "roles/owner",
       "roles/storage.objectViewer",
-      "roles/storage.objectAdmin",
-      "roles/storage.objectViewer"
+      "roles/storage.objectAdmin"
     ]
   }
 
