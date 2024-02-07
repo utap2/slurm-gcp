@@ -31,7 +31,7 @@ locals {
 
 
   controller_instance_config = {
-    disk_size_gb    = 100
+    disk_size_gb    = 800
     disk_type       = "pd-standard"
     machine_type    = "n1-standard-4"
     service_account = module.slurm_sa_iam["controller"].service_account
