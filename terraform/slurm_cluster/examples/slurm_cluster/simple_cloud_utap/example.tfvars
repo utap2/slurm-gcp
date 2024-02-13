@@ -20,6 +20,6 @@
 
 project_id = "<PROJECT_ID>"
 
-slurm_cluster_name = "simple"
+slurm_cluster_name = "simple1"
 
 region = "us-central1"
