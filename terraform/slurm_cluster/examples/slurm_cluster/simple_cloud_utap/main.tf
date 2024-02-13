@@ -20,15 +20,6 @@
 
 locals {
 
-  network_storage      = [{
-       server_ip     = "none"
-       remote_mount  = "BUCKET_NAME"
-       local_mount   = "/data"
-       fs_type       = "gcsfuse"
-       #mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777,allow_other"
-       mount_options = "rw,_netdev,user,file_mode=777,dir_mode=777"
-  }]
-
 
   controller_instance_config = {
     disk_size_gb    = 800
