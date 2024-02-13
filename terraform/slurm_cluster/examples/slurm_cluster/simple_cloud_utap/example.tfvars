@@ -22,4 +22,4 @@ project_id = "<PROJECT_ID>"
 
 slurm_cluster_name = "simple"
 
-region = "us-west4"
+region = "us-central1"
